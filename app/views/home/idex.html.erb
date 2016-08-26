@@ -1,0 +1,10 @@
+<% if current_user %>
+  <span> Welcome User: <%= current_user.firstName %> </span>
+  <div>
+  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> </div>
+<% else %>
+  <%= link_to 'Sign In', new_user_session_path %>
+<% end %>
+
+<h1>Home#idex</h1>
+<p>Find me in app/views/home/idex.html.erb</p>
